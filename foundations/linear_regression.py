@@ -13,4 +13,4 @@ class Solution:
         # Round to 5 decimal places
         n = len(model_prediction)
 
-        return np.round((np.sum((model_prediction-ground_truth)**2))/n,5)
+        return np.round((np.sum(np.square(model_prediction-ground_truth)))/n,5)
